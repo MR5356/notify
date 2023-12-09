@@ -29,3 +29,7 @@ func (b *WebhookBot) Send(ctx context.Context, msg *notify.Message) error {
 	logrus.Debugf("post notification v2: %+v", v2)
 	return err
 }
+
+func (b *WebhookBot) Name() string {
+	return "lark"
+}

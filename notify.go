@@ -9,6 +9,7 @@ type Notify struct {
 }
 
 type Notifier interface {
+	Name() string
 	Send(ctx context.Context, msg *Message) error
 }
 
