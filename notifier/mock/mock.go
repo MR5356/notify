@@ -22,3 +22,7 @@ func (n *Notifier) Send(ctx context.Context, msg *notify.Message) error {
 func (n *Notifier) Name() string {
 	return "mock"
 }
+
+func (n *Notifier) Params() []notify.Param {
+	return make([]notify.Param, 0)
+}

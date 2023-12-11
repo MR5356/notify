@@ -33,3 +33,13 @@ func (b *WebhookBot) Send(ctx context.Context, msg *notify.Message) error {
 func (b *WebhookBot) Name() string {
 	return "lark"
 }
+
+func (b *WebhookBot) Params() []notify.Param {
+	return []notify.Param{
+		{
+			Name: "hook_url",
+			Desc: "飞书机器人webhook地址",
+			Type: "string",
+		},
+	}
+}
